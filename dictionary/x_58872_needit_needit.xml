@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="3" type="collection">
         <element label="New field 1" max_length="40" name="new_field_1" type="integer"/>
         <element label="New field 2" max_length="40" name="new_field_2" type="integer"/>
+        <element label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element label="New Audio" max_length="40" name="u_audio_2" type="audio"/>
+        <element label="New Audio" max_length="40" name="u_audio_3" type="audio"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="facilities 2" label="What needed" mandatory="true" max_length="40" name="u_choice_10" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Facilities 2" sequence="0" value="facilities 2"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Choice 2" sequence="1" value="Choice 2"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="omit_sys_original=true" label="New Currency" max_length="20" name="u_currency_5" type="currency"/>
+        <element choice="1" label="New field 3" max_length="40" name="u_new_field_3" type="integer">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="13" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element inactive="true" inactive_on_update="true" label="Human Ressources" sequence="0" value="human ressources"/>
+                <element inactive_on_update="false" label="Requested" sequence="0" value="13"/>
+                <element inactive_on_update="false" label="Awaiting Approval" sequence="1" value="14"/>
+                <element inactive="true" inactive_on_update="true" label="Facilites" sequence="1" value="facilites"/>
+                <element inactive_on_update="false" label="Approved" sequence="2" value="15"/>
+                <element inactive="true" inactive_on_update="true" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Awaiting Feedback" sequence="3" value="16"/>
+                <element inactive="true" inactive_on_update="true" label="Your Department Choice" sequence="3" value="your department choice"/>
+                <element inactive_on_update="false" label="Closed Complete" sequence="4" value="3"/>
+                <element inactive_on_update="false" label="Withdrawn" sequence="5" value="8"/>
+            </choice>
+        </element>
     </element>
 </database>
